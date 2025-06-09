@@ -2,55 +2,56 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GIYU STORE</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GIYU STORE</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <img src="logo-giyu.png" alt="GIYU STORE Logo" class="logo" />
-        <img src="banner1.png" alt="Banner 1" class="banner" />
-        <img src="banner2.png" alt="Banner 2" class="banner" />
-        <h1>GIYU STORE - Layanan Sosial Media</h1>
-    </header>
-
-    <section class="order-form">
-        <h2>Formulir Pemesanan</h2>
-        <form id="orderForm">
-            <label for="platform">Pilih Platform:</label>
-            <select id="platform" name="platform" required onchange="updateServiceOptions()">
-                <option value="">-- Pilih --</option>
-                <option value="instagram">Instagram</option>
-                <option value="tiktok">TikTok</option>
-                <option value="facebook">Facebook</option>
-                <option value="telegram">Telegram</option>
-                <option value="whatsapp">WhatsApp</option>
-                <option value="twitter">Twitter</option>
-            </select>
-
-            <label for="service">Layanan:</label>
-            <select id="service" name="service" required onchange="calculateTotal()">
-                <option value="">-- Pilih Platform Dulu --</option>
-            </select>
-
-            <label for="quantity">Jumlah:</label>
-            <input type="number" id="quantity" name="quantity" min="1" value="1" onchange="calculateTotal()" required />
-
-            <p>Total Harga: <strong id="total">Rp 0</strong></p>
-            <button type="submit">Pesan Sekarang</button>
-        </form>
-    </section>
-
-    <div class="chat-buttons">
-        <a href="https://wa.me/6283138846539" target="_blank" class="wa-chat">
-            <img src="logo-whatsapp.png" alt="WhatsApp" />
-        </a>
-        <a href="https://t.me/gaxshaa" target="_blank" class="tg-chat">
-            <img src="logo-telegram.png" alt="Telegram" />
-        </a>
+  <header>
+    <img src="logo-giyu.png" alt="Giyu Logo" class="logo" />
+    <div class="banner-container">
+      <img src="banner1.jpg" class="banner" />
+      <img src="banner2.jpg" class="banner" />
     </div>
+  </header>
 
-    <script src="script.js"></script>
+  <main class="form-section">
+    <h1>Formulir Pemesanan</h1>
+    <form id="orderForm">
+      <label for="platform">Pilih Platform</label>
+      <select id="platform" name="platform" required>
+        <option value="">-- Pilih Platform --</option>
+        <option value="instagram">📸 Instagram</option>
+        <option value="tiktok">🎵 TikTok</option>
+        <option value="facebook">📘 Facebook</option>
+        <option value="telegram">📱 Telegram</option>
+        <option value="whatsapp">🟢 WhatsApp</option>
+        <option value="twitter">🐦 Twitter</option>
+      </select>
+
+      <label for="service">Pilih Layanan</label>
+      <select id="service" name="service" required>
+        <option value="">-- Pilih Layanan --</option>
+        <option value="followers">Followers</option>
+        <option value="likes">Likes</option>
+        <option value="views">Views</option>
+        <option value="comments">Comments</option>
+      </select>
+
+      <label for="jumlah">Jumlah</label>
+      <input type="number" id="jumlah" name="jumlah" placeholder="Contoh: 1000" required />
+
+      <label for="nama">Nama Anda</label>
+      <input type="text" id="nama" name="nama" placeholder="Contoh: Raka" required />
+
+      <label for="nowa">Nomor WhatsApp</label>
+      <input type="text" id="nowa" name="nowa" placeholder="Contoh: 6281234567890" required />
+
+      <button type="submit">Kirim Pesanan</button>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>

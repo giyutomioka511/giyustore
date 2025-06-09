@@ -1,13 +1,16 @@
+const prices = {
+  Instagram: { Followers: 55, Likes: 14, Views: 9, Comments: 14 },
+  TikTok: { Followers: 69, Likes: 14, Views: 10, Comments: 14 },
+  Facebook: { Followers: 70, Likes: 100, Views: 100 },
+  Telegram: { Members: 75, Views: 15 },
+  WhatsApp: { Members: 85 },
+  Twitter: { Followers: 300, Likes: 55, Retweets: 55, Impressions: 55 }
+};
 
-document.getElementById("orderForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-  const platform = document.getElementById("platform").value;
-  const service = document.getElementById("service").value;
-  const jumlah = document.getElementById("jumlah").value;
-  const nama = document.getElementById("nama").value;
-  const nowa = document.getElementById("nowa").value;
-
-  const pesan = `*PESANAN BARU - GIYU STORE*\nNama: ${nama}\nPlatform: ${platform}\nLayanan: ${service}\nJumlah: ${jumlah}\nNomor WA: ${nowa}`;
-  const url = `https://wa.me/6283138846539?text=${encodeURIComponent(pesan)}`;
-  window.open(url, "_blank");
+document.getElementById("orderForm").addEventListener("input", function () {
+  const platform = this.platform.value;
+  const service = this.service.value;
+  const qty = parseInt(this.quantity.value) || 0;
+  const price = prices[platform]?.[service] || 0;
+  document.getElementById("total").innerText = price * qty;
 });

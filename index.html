@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -9,47 +8,58 @@
 </head>
 <body>
   <header>
-    <img src="logo-giyu.png" alt="Giyu Logo" class="logo" />
-    <div class="banner-container">
-      <img src="banner1.jpg" class="banner" />
-      <img src="banner2.jpg" class="banner" />
+    <img src="logo-giyu.png" alt="GIYU STORE Logo" class="logo" />
+    <div class="banners">
+      <img src="banner1.jpg" alt="Banner 1" />
+      <img src="banner2.jpg" alt="Banner 2" />
     </div>
   </header>
 
-  <main class="form-section">
-    <h1>Formulir Pemesanan</h1>
+  <main>
     <form id="orderForm">
-      <label for="platform">Pilih Platform</label>
-      <select id="platform" name="platform" required>
-        <option value="">-- Pilih Platform --</option>
-        <option value="instagram">📸 Instagram</option>
-        <option value="tiktok">🎵 TikTok</option>
-        <option value="facebook">📘 Facebook</option>
-        <option value="telegram">📱 Telegram</option>
-        <option value="whatsapp">🟢 WhatsApp</option>
-        <option value="twitter">🐦 Twitter</option>
-      </select>
+      <h2>Formulir Pesanan</h2>
+      <label>Platform:
+        <select name="platform" required>
+          <option value="Instagram">Instagram</option>
+          <option value="TikTok">TikTok</option>
+          <option value="Facebook">Facebook</option>
+          <option value="Telegram">Telegram</option>
+          <option value="WhatsApp">WhatsApp</option>
+          <option value="Twitter">Twitter</option>
+        </select>
+      </label>
 
-      <label for="service">Pilih Layanan</label>
-      <select id="service" name="service" required>
-        <option value="">-- Pilih Layanan --</option>
-        <option value="followers">Followers</option>
-        <option value="likes">Likes</option>
-        <option value="views">Views</option>
-        <option value="comments">Comments</option>
-      </select>
+      <label>Layanan:
+        <select name="service" required>
+          <option value="Followers">Followers</option>
+          <option value="Likes">Likes</option>
+          <option value="Views">Views</option>
+          <option value="Comments">Comments</option>
+          <option value="Members">Members</option>
+        </select>
+      </label>
 
-      <label for="jumlah">Jumlah</label>
-      <input type="number" id="jumlah" name="jumlah" placeholder="Contoh: 1000" required />
+      <label>Jumlah: <input type="number" name="quantity" id="quantity" required /></label>
+      <p>Total Harga: Rp <span id="total">0</span></p>
 
-      <label for="nama">Nama Anda</label>
-      <input type="text" id="nama" name="nama" placeholder="Contoh: Raka" required />
+      <label>Metode Pembayaran:
+        <select name="payment" required>
+          <option value="DANA">DANA</option>
+          <option value="OVO">OVO</option>
+          <option value="GoPay">GoPay</option>
+          <option value="Bank Transfer">Transfer Bank</option>
+        </select>
+      </label>
 
-      <label for="nowa">Nomor WhatsApp</label>
-      <input type="text" id="nowa" name="nowa" placeholder="Contoh: 6281234567890" required />
-
-      <button type="submit">Kirim Pesanan</button>
+      <button type="submit">Pesan Sekarang</button>
     </form>
+
+    <a href="https://wa.me/6283138846539" class="wa-float" target="_blank">
+      <img src="logo-whatsapp.png" alt="WhatsApp" />
+    </a>
+    <a href="https://t.me/gaxshaa" class="wa-float" target="_blank">
+      <img src="logo-telegram.png" alt="Telegram" />
+    </a>
   </main>
 
   <script src="script.js"></script>
